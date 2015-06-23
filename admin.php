@@ -33,7 +33,7 @@ $errorMsg = "";
 <!DOCTYPE html>
 <html lang="en" class="app">
 <head> <meta charset="utf-8" />
-<title>FORBIDDEN 403</title>
+<title>Seguros AP |</title>
 <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="stylesheet" href="css/app.v1.css" type="text/css" />
@@ -49,7 +49,7 @@ $errorMsg = "";
 		<header class="bg-black dk header navbar navbar-fixed-top-xs">
 			<div class="navbar-header aside-md">
 				<a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
-				<a href="#" class="navbar-brand" data-toggle="fullscreen">Graphix</a>
+				<a href="#" class="navbar-brand" data-toggle="fullscreen">Seguros AP</a>
 				<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a>
 			</div>
 			<ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">

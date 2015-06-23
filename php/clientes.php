@@ -1,10 +1,10 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-list"></i> Ordenes de trabajo</header>
+	<header class="panel-heading"> <i class="fa fa-archive"></i> Clientes </header>
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">
-			<a href="admin.php?m=clientesAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Nueva Orden</a>
+			<a href="admin.php?m=clientesAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus icon"></i>  Agregar Cliente </a>
 		</div>
 		<div class="col-sm-7 m-b-xs text-center">
 			<a href="" class="btn btn-default btn-sm">Cuentas por Cobrar</a>
