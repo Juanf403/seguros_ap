@@ -21,7 +21,27 @@ if ( isset($_GET['m']) ){
 		case "clientesEditar":
 			$paginaPHP = "php/clientesEditar.php";
 		break;
-
+		case "agentes":
+			$paginaPHP = "php/agentes.php";
+		break;
+		case "agentesAgregar":
+			$paginaPHP = "php/agentesAgregar.php";
+		break;
+		case "agentesEditar":
+			$paginaPHP = "php/agentesEditar.php";
+		break;
+		case "aseguradoras":
+			$paginaPHP = "php/aseguradoras.php";
+		break;
+		case "aseguradorasAgregar":
+			$paginaPHP = "php/aseguradorasAgregar.php";
+		break;
+		case "ramos":
+			$paginaPHP = "php/ramos.php";
+		break;
+		case "subramos":
+			$paginaPHP = "php/subramos.php";
+		break;
 	}
 } else {
 	$paginaPHP = "php/index.php";
@@ -72,12 +92,15 @@ $errorMsg = "";
 								<!-- nav -->
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
-										<li> <a href="admin.php?m=clientes"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
+										
 										<li class="">
 											<a href="#webpage" class=""><i class="fa fa-angle-right icon"></i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>Configuracion</span> </a>
 											<ul class="nav lt" style="display: none;">
-												<li> <a href="admin.php?m=blog"> <i class="fa fa-angle-right"></i> <span>Usuarios</span> </a> </li>
-												<li> <a href="admin.php?m=blog"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
+												<li> <a href="admin.php?m=clientes"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
+												<li> <a href="admin.php?m=agentes"> <i class="fa fa-angle-right"></i> <span>Agentes</span> </a> </li>
+												<li> <a href="admin.php?m=aseguradoras"> <i class="fa fa-angle-right"></i> <span>Aseguradoras</span> </a> </li>
+												<li> <a href="admin.php?m=ramos"> <i class="fa fa-angle-right"></i> <span>Ramos</span> </a> </li>
+												<li> <a href="admin.php?m=subramos"> <i class="fa fa-angle-right"></i> <span>Sub-Ramos</span> </a> </li>
 											</ul>
 										</li>
 									</ul>

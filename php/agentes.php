@@ -1,12 +1,15 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-archive"></i> Clientes </header>
+	<header class="panel-heading"> <i class="fa fa-archive"></i> Agentes </header>
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">
-			<a href="admin.php?m=clientesAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus icon"></i>  Agregar Cliente </a>
+			<a href="admin.php?m=agentesAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus icon"></i>  Agregar Agente </a>
 		</div>
-		<div class="col-sm-7"></div>
+		<div class="col-sm-7 m-b-xs text-center">
+			<a href="" class="btn btn-default btn-sm">Cuentas por Cobrar</a>
+			<a href="" class="btn btn-default btn-sm">Reporte de Ingresos</a>
+		</div>
 		<div class="col-sm-3">
 			<div class="input-group">
 				<input type="text" class="input-sm form-control" placeholder="Buscar"> <span class="input-group-btn"> <button class="btn btn-sm btn-default" type="button"> <i class="fa fa-search"></i> </button> </span>
@@ -33,7 +36,7 @@
 					<td>columna 3</td>
 					<td>columna 4 </td>
 					<td>
-						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=agentesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
 						<a href="admin.php?m=clientes&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
@@ -43,8 +46,8 @@
 					<td>columna 3</td>
 					<td>columna 4 </td>
 					<td>
-						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
-						<a href="admin.php?m=clientes&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=agentesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=agentes&del" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
 
