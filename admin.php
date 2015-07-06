@@ -39,8 +39,11 @@ if ( isset($_GET['m']) ){
 		case "ramos":
 			$paginaPHP = "php/ramos.php";
 		break;
-		case "subramos":
-			$paginaPHP = "php/subramos.php";
+		case "ramosAgregar":
+			$paginaPHP = "php/ramosAgregar.php";
+		break;
+		case "ramosEditar":
+			$paginaPHP = "php/ramosEditar.php";
 		break;
 	}
 } else {

@@ -7,7 +7,7 @@ if ( isset($_POST['nombre']) ){
 	$nombre 		= mysql_real_escape_string($_POST['nombre']);
 
 
-	if ( mysql_query("INSERT INTO clientes SET fecha='".date("Y-m-d")."',clave='".$clave."',nombre='".$nombre."'") ){
+	if ( mysql_query("INSERT INTO aseguradoras SET fecha='".date("Y-m-d")."',clave='".$clave."',nombre='".$nombre."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Cliente agregado correctamente.
 			</div>';
