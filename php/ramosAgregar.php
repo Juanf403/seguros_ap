@@ -1,5 +1,5 @@
 <?php
-#campos: fecha,num_cliente,nombre,rfc,direccion,correo,colonia,cp,ciudad,estado,telefono
+#campos: fecha,nombre,rfc,telefono,correo,direccion,colonia,cp,ciudad,estado
 
 if ( isset($_POST['nombre']) ){
 
@@ -30,9 +30,9 @@ if ( isset($_POST['nombre']) ){
 		<section class="panel panel-default">
 			<header class="panel-heading">
 				<div class="pull-right">
-					<a href="admin.php?m=agentes" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
+					<a href="" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
 				</div>
-				<i class="fa fa-plus icon"></i> Agregar Agente
+				<i class="fa fa-plus icon"></i> Agregar Cliente
 			</header>
 			<div class="panel-body">
 				<form class="bs-example form-horizontal" action="" method="post">
@@ -40,32 +40,52 @@ if ( isset($_POST['nombre']) ){
 					<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="col-lg-4 control-label">Aseguradora </label>
-									<div class="col-lg-8"><input type="text" name="nombre" class="form-control" placeholder=""></div>
+									<label class="col-lg-2 control-label">Nombre: </label>
+									<div class="col-lg-10"><input type="text" name="nombre" class="form-control" placeholder=""></div>
 								</div>
 							</div>	
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="col-lg-4 control-label">Cedula</label>
-									<div class="col-lg-8"><input type="text" name="rfc" class="form-control" placeholder=""></div>
+									<label class="col-lg-2 control-label">RFC</label>
+									<div class="col-lg-10"><input type="text" name="rfc" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="col-lg-4 control-label">Nombre</label>
-									<div class="col-lg-8"><input type="text" name="telefono" class="form-control" placeholder=""></div>
+									<label class="col-lg-2 control-label">Tel&eacute;fono</label>
+									<div class="col-lg-10"><input type="text" name="telefono" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 							<div class="col-md-6">
 									<div class="form-group">
-										<label class="col-lg-4 control-label">Tel&eacute;fono</label>
-										<div class="col-lg-8"><input type="text" name="correo" class="form-control" placeholder=""></div>
+										<label class="col-lg-2 control-label">Correo</label>
+										<div class="col-lg-10"><input type="text" name="correo" class="form-control" placeholder=""></div>
 									</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="col-lg-4 control-label">Direcci&oacute;n</label>
-									<div class="col-lg-8"><input type="text" name="direccion" class="form-control" placeholder=""></div>
+									<label class="col-lg-2 control-label">Direcci&oacute;n</label>
+									<div class="col-lg-10"><input type="text" name="direccion" class="form-control" placeholder=""></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-lg-2 control-label">Colonia: </label>
+									<div class="col-lg-4"><input type="text" name="contacto" class="form-control" placeholder=""></div>
+									<label class="col-lg-2 control-label">CP: </label>
+									<div class="col-lg-4"><input type="text" name="cp" class="form-control" placeholder=""></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-lg-2 control-label">Ciudad: </label>
+									<div class="col-lg-10"><input type="text" name="ciudad" class="form-control" placeholder=""></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-lg-2 control-label">Estado: </label>
+									<div class="col-lg-10"><input type="text" name="estado" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 					</div>
@@ -73,7 +93,7 @@ if ( isset($_POST['nombre']) ){
 					<div class="form-group text-right">
 						<div class="col-lg-12"> 
 							<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-check icon"></i> Agregar</button>
-							<a href="admin.php?m=agentes" class="btn btn-sm btn-danger"><i class="fa fa-times icon"></i> Cancelar</a>
+							<a href="admin.php?m=clientes" class="btn btn-sm btn-danger"><i class="fa fa-times icon"></i> Cancelar</a>
 						</div>
 					</div>
 				</form>

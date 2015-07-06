@@ -100,7 +100,6 @@ $errorMsg = "";
 												<li> <a href="admin.php?m=agentes"> <i class="fa fa-angle-right"></i> <span>Agentes</span> </a> </li>
 												<li> <a href="admin.php?m=aseguradoras"> <i class="fa fa-angle-right"></i> <span>Aseguradoras</span> </a> </li>
 												<li> <a href="admin.php?m=ramos"> <i class="fa fa-angle-right"></i> <span>Ramos</span> </a> </li>
-												<li> <a href="admin.php?m=subramos"> <i class="fa fa-angle-right"></i> <span>Sub-Ramos</span> </a> </li>
 											</ul>
 										</li>
 									</ul>

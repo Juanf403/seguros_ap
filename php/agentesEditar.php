@@ -73,7 +73,7 @@ if ( isset($_POST['nombre']) ){
 					<div class="form-group text-right">
 						<div class="col-lg-12"> 
 							<button type="submit" class="btn btn-sm btn-success"><i class="fa fa-check icon"></i> Agregar</button>
-							<a href="admin.php?m=clientes" class="btn btn-sm btn-danger"><i class="fa fa-times icon"></i> Cancelar</a>
+							<a href="admin.php?m=agentes" class="btn btn-sm btn-danger"><i class="fa fa-times icon"></i> Cancelar</a>
 						</div>
 					</div>
 				</form>
