@@ -1,22 +1,16 @@
 <?php
-#campos: fecha,num_cliente,nombre,rfc,direccion,correo,colonia,cp,ciudad,estado,telefono
 
 if ( isset($_POST['nombre']) ){
 
-	$num_cliente 	= mysql_real_escape_string($_POST['num_cliente']);
-	$nombre 		= mysql_real_escape_string($_POST['nombre']);
-	$rfc 			= mysql_real_escape_string($_POST['rfc']);
-	$direccion  	= mysql_real_escape_string($_POST['direccion']);
-	$correo  		= mysql_real_escape_string($_POST['correo']);
-	$colonia  		= mysql_real_escape_string($_POST['colonia']);
-	$cp  			= mysql_real_escape_string($_POST['cp']);
-	$ciudad  		= mysql_real_escape_string($_POST['ciudad']);
-	$estado  		= mysql_real_escape_string($_POST['estado']);
-	$telefono  		= mysql_real_escape_string($_POST['telefono']);
+	$num_cliente 	= mysql_real_escape_string($_POST['aseguradora']);
+	$nombre 		= mysql_real_escape_string($_POST['cedula']);
+	$rfc 			= mysql_real_escape_string($_POST['nombre']);
+	$direccion  	= mysql_real_escape_string($_POST['telefono']);
+	$correo  		= mysql_real_escape_string($_POST['direccion']);
 
-	if ( mysql_query("INSERT INTO clientes SET fecha='".date("Y-m-d")."',num_cliente='".$num_cliente."',nombre='".$nombre."',nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."'") ){
+	if ( mysql_query("INSERT INTO agentes SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',cedula='".$cedula."',nombre='".$nombre."',telefono='".$telefono."',direccion='".$direccion."'") ){
 		$errorMsg = '<div class="alert alert-success">
-				<i class="fa fa-check"></i> Cliente agregado correctamente.
+				<i class="fa fa-check"></i> Agrente editado correctamente.
 			</div>';
 	} else {
 		$errorMsg = '<div class="alert alert-danger">

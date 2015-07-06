@@ -12,7 +12,7 @@ if ( isset($_POST['nombre']) ){
 
 	if ( mysql_query("UPDATE ramos SET aseguradora='".$aseguradora."',num_ramo='".$num_ramo."',comision='".$comision."',descripcion='".$descripcion."',adicional='".$adicional."'") ){
 		$errorMsg = '<div class="alert alert-success">
-				<i class="fa fa-check"></i> Cliente editado correctamente.
+				<i class="fa fa-check"></i> Ramo editado correctamente.
 			</div>';
 	} else {
 		$errorMsg = '<div class="alert alert-danger">

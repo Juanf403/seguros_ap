@@ -9,7 +9,7 @@ if ( isset($_POST['nombre']) ){
 
 	if ( mysql_query("INSERT INTO aseguradoras SET fecha='".date("Y-m-d")."',clave='".$clave."',nombre='".$nombre."'") ){
 		$errorMsg = '<div class="alert alert-success">
-				<i class="fa fa-check"></i> Cliente agregado correctamente.
+				<i class="fa fa-check"></i> Aseguradora agregada correctamente.
 			</div>';
 	} else {
 		$errorMsg = '<div class="alert alert-danger">
