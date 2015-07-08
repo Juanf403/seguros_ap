@@ -42,7 +42,7 @@ if ( isset($_POST['nombre']) ){
 				<div class="pull-right">
 					<a href="admin.php?m=endozos" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
 				</div>
-				<i class="fa fa-plus icon"></i> Alta de Endosos
+				<i class="fa fa-plus icon"></i> Agregar Endozos
 			</header>
 			<div class="panel-body">
 				<form class="bs-example form-horizontal" action="" method="post">
@@ -100,14 +100,14 @@ if ( isset($_POST['nombre']) ){
 					<div class="row">
 						<div class="col-md-8">
 							<div class="form-group">
-								<label class="col-lg-3 control-label">Concepto del endoso:</label>
+								<label class="col-lg-3 control-label">Concepto del Endozo:</label>
 								<div class="col-lg-9"><input type="text" name="con_endozo" class="form-control" placeholder></div>
 						    </div>
 						</div>
 
 						<div class="col-md-4">
 							<div class="form-group">
-								<label class="col-lg-8 control-label">Tipo de endoso:</label>
+								<label class="col-lg-8 control-label">Tipo de Endozo:</label>
 								<div class="col-lg-4"><input type="text" name="tip_endozo" class="form-control" placeholder></div>
 						    </div>
 						</div>

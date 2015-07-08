@@ -1,6 +1,6 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-list"></i>Recibos de pOlizas</header>
+	<header class="panel-heading"> <i class="fa fa-list"></i> Polizas</header>
 	
 	<div class="row wrapper">
 		<div class="col-xs-2 col-sm-2  m-b-xs">
@@ -35,7 +35,7 @@
 					<td>columna 3</td>
 					<td>columna 4 </td>
 					<td>
-						<a href="admin.php?m=polizasAgregar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=polizasEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
 						<a href="admin.php?m=poliza&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>

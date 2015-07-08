@@ -48,6 +48,33 @@ if ( isset($_GET['m']) ){
 		case "ramosEditar":
 			$paginaPHP = "php/ramosEditar.php";
 		break;
+		case "polizas":
+			$paginaPHP = "php/polizas.php";
+		break;
+		case "polizasAgregar":
+			$paginaPHP = "php/polizasAgregar.php";
+		break;
+		case "polizasEditar":
+			$paginaPHP = "php/polizasEditar.php";
+		break;
+		case "endozos":
+			$paginaPHP = "php/endozos.php";
+		break;
+		case "endozosAgregar":
+			$paginaPHP = "php/endozosAgregar.php";
+		break;
+		case "endozosEditar":
+			$paginaPHP = "php/endozosEditar.php";
+		break;
+		case "recibos":
+			$paginaPHP = "php/recibos.php";
+		break;
+		case "recibosAgregar":
+			$paginaPHP = "php/recibosAgregar.php";
+		break;
+		case "recibosEditar":
+			$paginaPHP = "php/recibosEditar.php";
+		break;
 	}
 } else {
 	$paginaPHP = "php/index.php";
@@ -98,9 +125,17 @@ $errorMsg = "";
 								<!-- nav -->
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
-										
+										<li> <a href="admin.php?m=polizas"> <i class="fa fa-angle-right"></i> <span>Polizas</span> </a> </li>
+										<li> <a href="admin.php?m=endozos"> <i class="fa fa-angle-right"></i> <span>Endozos</span> </a> </li>
+										<li> <a href="admin.php?m=recibos"> <i class="fa fa-angle-right"></i> <span>Recibos</span> </a> </li>
 										<li class="">
-											<a href="#webpage" class=""><i class="fa fa-angle-right icon"></i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>Configuracion</span> </a>
+											<a href="#webpage" class=""><i class="fa fa-angle-right icon"></i> 
+												<span class="pull-right"> 
+													<i class="fa fa-angle-down text"></i> 
+													<i class="fa fa-angle-up text-active"></i> 
+												</span> 
+												<span>Catalogos</span> 
+											</a>
 											<ul class="nav lt" style="display: none;">
 												<li> <a href="admin.php?m=clientes"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
 												<li> <a href="admin.php?m=agentes"> <i class="fa fa-angle-right"></i> <span>Agentes</span> </a> </li>
