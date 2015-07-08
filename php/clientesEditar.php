@@ -91,6 +91,7 @@ $data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE id='".$id."
 								<div class="col-lg-10"><input type="text" name="estado" value="<?php echo $data->estado; ?>" class="form-control" placeholder=""></div>
 							</div>
 						</div>
+					</div>
 					<div class="line line-dashed line-lg pull-in"></div>
 					<div class="form-group text-right">
 						<div class="col-lg-12"> 
@@ -98,6 +99,6 @@ $data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE id='".$id."
 							<a href="admin.php?m=clientes" class="btn btn-sm btn-danger"><i class="fa fa-times icon"></i> Cancelar</a>
 						</div>
 					</div>
-				</form>
-			</div>
+				</form>		
+			</div>		
 		</section>

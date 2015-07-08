@@ -3,7 +3,7 @@
 	<header class="panel-heading"> <i class="fa fa-archive"></i> Clientes </header>
 	
 	<div class="row wrapper">
-		<div class="col-sm-2 m-b-xs">
+		<div class="col-sm-2 m-b-sm">
 			<a href="admin.php?m=clientesAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus icon"></i>  Agregar Cliente </a>
 		</div>
 		<div class="col-sm-7"></div>
@@ -18,32 +18,37 @@
 		<table class="table table-striped b-t b-light">
 			<thead>
 				<tr>
-					<th>Categoria</th>
-					<th>Nombre/Empresa</th>
-					<th>Contacto</th>
-					<th width="200">Telefono</th>
-					<th width="120"></th>
+					<th>Nombre</th>
+					<th width="120">RFC</th>
+					<th>Direccion</th>
+					<th>Ciudad</th>
+					<th width="120">Telefono</th>
+					<th width="160"></th>
 				</tr>
 			</thead>
 			<tbody>
-
 				<tr>
-					<td>columna 1</td>
+					
 					<td>columna 2 </td>
 					<td>columna 3</td>
 					<td>columna 4 </td>
+					<td>columna 5 </td>
+					<td>columna 6 </td>
 					<td>
-						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=clientesConsultar&id=" class="btn btn-sm btn-info"> <i class="fa fa-plus"> </i></a> &nbsp;
+						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;
 						<a href="admin.php?m=clientes&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
 				<tr>
-					<td>columna 1</td>
 					<td>columna 2 </td>
 					<td>columna 3</td>
 					<td>columna 4 </td>
+					<td>columna 5 </td>
+					<td>columna 6 </td>
 					<td>
-						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=clientesConsultar&id=" class="btn btn-sm btn-info"><i class="fa fa-plus"></i></a> &nbsp;
+						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;
 						<a href="admin.php?m=clientes&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>

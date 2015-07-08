@@ -21,6 +21,9 @@ if ( isset($_GET['m']) ){
 		case "clientesEditar":
 			$paginaPHP = "php/clientesEditar.php";
 		break;
+		case "clientesConsultar":
+			$paginaPHP = "php/clientesConsultar.php";
+		break;
 		case "agentes":
 			$paginaPHP = "php/agentes.php";
 		break;

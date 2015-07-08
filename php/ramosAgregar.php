@@ -11,7 +11,7 @@ if ( isset($_POST['nombre']) ){
 
 	if ( mysql_query("INSERT INTO ramos SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',num_ramo='".$num_ramo."',comision='".$comision."',rfc='".$rfc."',descripcion='".$descripcion."',adicional='".$adicional."'") ){
 		$errorMsg = '<div class="alert alert-success">
-				<i class="fa fa-check"></i> Cliente agregado correctamente.
+				<i class="fa fa-check"></i> Ramo agregado correctamente.
 			</div>';
 	} else {
 		$errorMsg = '<div class="alert alert-danger">
