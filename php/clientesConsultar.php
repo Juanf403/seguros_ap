@@ -78,18 +78,18 @@
 			<section class="panel panel-default pos-rlt clearfix">
 				<header class="panel-heading"> <i class="fa fa-file-o" style=""> Polizas</i> </header>
 				<div class="col-sm-6">
-				<div class="select filter" data-resize="auto"> 
-					<br>
-					<button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle"> 
-						<span class="dropdown-label">Buscar por </span> 
-						<span class="caret"></span> 
-					</button> 
-					<ul class="dropdown-menu"> 
-						<li data-value="all"><a href="#">Poliza</a></li> 
-						<li data-value="lt5m"><a href="#">Aseguradora</a></li> 
-						<li data-value="gte5m"><a href="#">Agente</a></li> 
-					</ul> 
-				</div>
+					<div class="select filter" data-resize="auto"> 
+						<br>
+						<button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle"> 
+							<span class="dropdown-label">Buscar por </span> 
+							<span class="caret"></span> 
+						</button> 
+						<ul class="dropdown-menu"> 
+							<li data-value="all"><a href="#">Poliza</a></li> 
+							<li data-value="lt5m"><a href="#">Aseguradora</a></li> 
+							<li data-value="gte5m"><a href="#">Agente</a></li> 
+						</ul> 
+					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="form-group">
