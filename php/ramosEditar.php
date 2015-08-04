@@ -1,5 +1,5 @@
 <?php
-$id = mysql_real_escape_string($_GET['id']);
+//$id = mysql_real_escape_string($_GET['id']);
 
 if ( isset($_POST['nombre']) ){
 
@@ -22,13 +22,13 @@ if ( isset($_POST['nombre']) ){
 
 }
 
-$data = mysql_fetch_object(mysql_query("SELECT * FROM ramos WHERE id='".$id."' LIMIT 1"));
+//$data = mysql_fetch_object(mysql_query("SELECT * FROM ramos WHERE id='".$id."' LIMIT 1"));
 
 ?>
 		<section class="panel panel-default">
 			<header class="panel-heading">
 				<div class="pull-right">
-					<a href="" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
+					<a href="admin.php?m=ramos" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
 				</div>
 				<i class="fa fa-plus icon"></i> Editar Ramo
 			</header>

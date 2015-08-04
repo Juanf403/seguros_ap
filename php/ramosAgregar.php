@@ -25,7 +25,7 @@ if ( isset($_POST['nombre']) ){
 		<section class="panel panel-default">
 			<header class="panel-heading">
 				<div class="pull-right">
-					<a href="" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
+					<a href="admin.php?m=ramos" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
 				</div>
 				<i class="fa fa-plus icon"></i> Agregar Ramo
 			</header>

@@ -4,7 +4,7 @@
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">
-			<a href="admin.php?m=aseguradorasAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus icon"></i>  Agregar Aseguradoa </a>
+			<a href="admin.php?m=aseguradorasAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus icon"></i>  Agregar Aseguradora </a>
 		</div>
 		<div class="col-sm-7"></div>
 		<div class="col-sm-3">

@@ -35,8 +35,8 @@
 					<td>columna 3</td>
 					<td>columna 4 </td>
 					<td>
-						<a href="admin.php?m=polizasEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
-						<a href="admin.php?m=poliza&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=polizasEditar" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=poliza" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
 			</tbody>

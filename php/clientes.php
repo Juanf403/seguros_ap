@@ -35,9 +35,9 @@
 					<td>columna 5 </td>
 					<td>columna 6 </td>
 					<td>
-						<a href="admin.php?m=clientesConsultar&id=" class="btn btn-sm btn-info"> <i class="fa fa-plus"> </i></a> &nbsp;
-						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;
-						<a href="admin.php?m=clientes&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=clientesConsultar" class="btn btn-sm btn-info"> <i class="fa fa-plus"> </i></a> &nbsp;
+						<a href="admin.php?m=clientesEditar" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;
+						<a href="admin.php?m=clientes" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
 				<tr>
@@ -47,9 +47,9 @@
 					<td>columna 5 </td>
 					<td>columna 6 </td>
 					<td>
-						<a href="admin.php?m=clientesConsultar&id=" class="btn btn-sm btn-info"><i class="fa fa-plus"></i></a> &nbsp;
-						<a href="admin.php?m=clientesEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;
-						<a href="admin.php?m=clientes&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=clientesConsultar" class="btn btn-sm btn-info"><i class="fa fa-plus"></i></a> &nbsp;
+						<a href="admin.php?m=clientesEditar" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;
+						<a href="admin.php?m=clientes" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
 

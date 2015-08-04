@@ -13,7 +13,7 @@ if ( isset($_POST['nombre']) ){
 	$agente        = mysql_real_escape_string($_POST['agente']);
 	$cliente       = mysql_real_escape_string($_POST['cliente']);
 	$asegurado     = mysql_real_escape_string($_POST['asegurado']);
-	$prima_neta    = mysql_real_escape_string($_POST['neto']);
+	$prima_neta    = mysql_real_escape_string($_POST['prima_neta']);
 	$recargo       = mysql_real_escape_string($_POST['recargo']);
 	$der_poliza    = mysql_real_escape_string($_POST['derpoliza']);
 	$iva           = mysql_real_escape_string($_POST['iva']);
@@ -25,28 +25,7 @@ if ( isset($_POST['nombre']) ){
 
 	
 
-	if ( mysql_query("INSERT INTO polizas SET fecha='".date("Y-m-d").
-		"',folio='".$folio.
-		"',poliza='".$poliza.
-		"',emision='".$emision.
-		"',vencimiento='".$vencimiento.
-		"',inicio_vig='".$inicio_vig.
-		"',moneda='".$moneda.
-		"',aseguradora='".$aseguradora.
-		"',ramo='".$ramo.
-		"',agente='".$agente.
-		"',cliente='".$cliente.
-		"',asegurado='".$asegurado.
-		"',neto='".$neto.
-		"',recargo='".$recargo.
-		"',derpoliza='".$derpoliza.
-		"',iva='".$iva.
-		"',total='".$total.
-		"',formapago='".$formapago.
-		"',anticipo='".$anticipo.
-		"',pago='".$pago.
-		"',adicional='".$adicional.
-		"'") ){
+	if ( mysql_query() ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Poliza agregada correctamente.
 			</div>';
@@ -69,7 +48,6 @@ if ( isset($_POST['nombre']) ){
 			<div class="panel-body">
 				<form class="bs-example form-horizontal" action="" method="post">
 					<?php echo $errorMsg; ?>
-
 					<div class="row">
 						<div class="col-md-6">
 							<div class="col-md-6">
@@ -87,12 +65,12 @@ if ( isset($_POST['nombre']) ){
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label class="col-lg-3 control-label" name="aseguradora" >Aseguradora</label>
-								<div class="col-lg-9">
-									<select class="form-control">
-									  <option>aseguradora 1</option>
-									  <option>aseguradora 2</option>
-									</select>
+								<label class="col-xs-3 col-sm-2 col-lg-3 control-label">Cliente</label>
+								<div class="col-xs-3 col-sm-2 col-lg-2">
+									<input type="text" name="cliente" class="form-control" placeholder="">
+								</div>
+								<div class="col-xs-6 col-sm-8 col-lg-7">
+									<input type="text" name="cliente" class="form-control" placeholder="">
 								</div>
 							</div>
 						</div>	
@@ -155,34 +133,14 @@ if ( isset($_POST['nombre']) ){
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="col-lg-6 control-label">Cliente</label>
-									<div class="col-lg-6">
-										<input type="text" name="cliente" class="form-control" placeholder="">
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-8">
-								<input type="text" name="agente" class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Asegurado</label>
-								<div class="col-lg-9"><input type="text" name="asegurado" class="form-control" placeholder=""></div>
-							</div>
-						</div>
+
 					</div>
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-6 control-label">Prima Neta:</label>
-									<div class="col-lg-6"><input type="text" name="neto" class="form-control" placeholder=""></div>
+									<div class="col-lg-6"><input type="text" name="prim_neta" class="form-control" placeholder=""></div>
 								</div>
 								
 								<div class="form-group">
@@ -226,13 +184,19 @@ if ( isset($_POST['nombre']) ){
 								</div>
 							</div>
 						</div>
+
 						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-lg-3 control-label">Asegurado</label>
+								<div class="col-lg-9"><input type="text" name="asegurado" class="form-control" placeholder=""></div>
+							</div>
 							<div class="form-group" style="">
 								<label class="col-md-3 control-label">Información Adicional</label>
-								<div class="col-md-9"><textarea name="adicional" class="form-control"  style="height:85px;"></textarea></div>
+								<div class="col-md-9"><textarea name="adicional" class="form-control"  style="height:130px;"></textarea></div>
 							</div>
 						</div>
 					</div>
+					
 					<div class="line line-dashed line-lg pull-in"></div>
 					<div class="form-group text-right">
 						<div class="col-lg-12"> 

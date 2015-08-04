@@ -1,5 +1,5 @@
 <?php
-$id = mysql_real_escape_string($_GET['id']);
+// $id = mysql_real_escape_string($_GET['id']);
 
 if ( isset($_POST['nombre']) ){
 
@@ -15,7 +15,7 @@ if ( isset($_POST['nombre']) ){
 	$telefono  		= mysql_real_escape_string($_POST['telefono']);
 
 
-	if ( mysql_query("UPDATE clientes SET num_cliente='".$num_cliente."',nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."' WHERE id='".$id."'") ){
+	if ( mysql_query() ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Cliente editado correctamente.
 			</div>';
@@ -27,13 +27,13 @@ if ( isset($_POST['nombre']) ){
 
 }
 
-$data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE id='".$id."' LIMIT 1"));
+//$data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE id='".$id."' LIMIT 1"));
 
 ?>
 		<section class="panel panel-default">
 			<header class="panel-heading">
 				<div class="pull-right">
-					<a href="" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
+					<a href="admin.php?m=clientes" class="return"><i class="fa fa-mail-reply"></i> Regresar</a>
 				</div>
 				<i class="fa fa-plus icon"></i> Editar Cliente
 			</header>
