@@ -1,6 +1,6 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-archive"></i> Ramos </header>
+	<header class="panel-heading"> <i class="fa fa-code-fork"></i> Ramos </header>
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">

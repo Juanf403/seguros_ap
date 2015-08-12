@@ -1,6 +1,6 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-archive"></i> Agentes </header>
+	<header class="panel-heading"> <i class="fa fa-male"></i> Agentes </header>
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">

@@ -1,14 +1,20 @@
 <?php 
 /*
 $serv = "localhost";
-$user = "anuncia2_aldia";
-$pass = "yBQdKBduDala";
-$data = "anuncia2_frontera";
+$user = "u203151_ventas";
+$pass = "Zv;%I.sJLpoF";
+$data = "u203151_ventas";
 */
+// $serv = "localhost";
+// $user = "u203151_ventas";
+// $pass = "Zv;%I.sJLpoF";
+// $data = "u203151_ventas";
+
 $serv = "localhost";
 $user = "root";
 $pass = "";
 $data = "f403_segurosap";
+
 
 ### FUNCIONES DE SEGURIDAD ###
 function xss($vuln){

@@ -14,15 +14,17 @@ if ( isset($_POST['user']) ){
 	$user = mysql_real_escape_string($_POST['user']);
 	$pass = mysql_real_escape_string($_POST['pass']);
 
-	$consulta = "SELECT * FROM usuarios WHERE email='".$user."' AND password='".$pass."' LIMIT 1";
+	$consulta = "SELECT * FROM usuarios WHERE usuario='".$user."' AND password='".md5($pass)."' LIMIT 1";
+
 	if ( mysql_num_rows( mysql_query($consulta) )){
 
 		$data 				= mysql_fetch_object(mysql_query($consulta));
 
-		$_SESSION['userId'] = $data->id;
-		$_SESSION['userNm'] = $user;
+		$_SESSION['userId'] = $data->idusuario;
+		$_SESSION['userNm'] = $data->nombre;
+		$_SESSION['userPv'] = $data->privilegio;
 
-		mysql_query("UPDATE usuarios SET acceso='".date("Y/m/d")."' WHERE id='".$data->id."'");
+		mysql_query("UPDATE usuarios SET ip='".$_SERVER['REMOTE_ADDR']."',ingreso='".date("Y-m-d H:i:s")."' WHERE idusuario='".$data->idusuario."'");
 
 		header("Location: admin.php");
 	} else {
@@ -37,18 +39,24 @@ if ( isset($_POST['user']) ){
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="bg-dark">
+<html lang="en" class="bg-dark red">
 <head> 
 		<meta charset="utf-8" />
-		<title>FORBIDDEN 403</title>
+		<title>Seguros AP</title>
 		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/font.css" type="text/css" />
 		<link rel="stylesheet" href="css/app.v1.css" type="text/css" />
 		<!--[if lt IE 9]>
 		<script src="js/ie/html5shiv.js"></script>
 		<script src="js/ie/respond.min.js"></script>
 		<script src="js/ie/excanvas.js"></script>
 		<![endif]-->
+	<style type="text/css">
+	.red{
+		background: rgb(247, 61, 80);
+	}
+	</style>
 </head>
 
 <body class="">
@@ -56,7 +64,7 @@ if ( isset($_POST['user']) ){
 		<div class="container aside-xxl">
 			<section class="panel panel-default bg-white m-t-lg">
 				<header class="panel-heading text-center">
-					<strong>FORBIDDEN 403</strong>
+					<strong>Seguros AP</strong>
 				</header>
 				<form action="" class="panel-body wrapper-lg" method="post">
 					<div class="form-group">

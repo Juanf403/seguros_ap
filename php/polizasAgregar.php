@@ -2,7 +2,6 @@
 
 if ( isset($_POST['nombre']) ){
 
-	$folio 		   = mysql_real_escape_string($_POST['folio']);
 	$poliza        = mysql_real_escape_string($_POST['poliza']);
 	$emision       = mysql_real_escape_string($_POST['emision']);
 	$vencimiento   = mysql_real_escape_string($_POST['vencimiento']);
@@ -51,25 +50,18 @@ if ( isset($_POST['nombre']) ){
 					<div class="row">
 						<div class="col-md-6">
 							<div class="col-md-6">
-							<div class="form-group">
-								<label class="col-lg-4 control-label"># Folio</label>
-								<div class="col-lg-8"><input type="text" name="folio" class="form-control" placeholder=""></div>
-							</div>
-							</div>
-							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label"># Poliza</label>
 									<div class="col-lg-8"><input type="text" name="poliza" class="form-control" placeholder=""></div>
 								</div>
 							</div>
+							<div class="col-md-6">
+							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="col-xs-3 col-sm-2 col-lg-3 control-label">Cliente</label>
-								<div class="col-xs-3 col-sm-2 col-lg-2">
-									<input type="text" name="cliente" class="form-control" placeholder="">
-								</div>
-								<div class="col-xs-6 col-sm-8 col-lg-7">
+								<div class="col-xs-9 col-sm-10 col-lg-9">
 									<input type="text" name="cliente" class="form-control" placeholder="">
 								</div>
 							</div>
@@ -167,9 +159,10 @@ if ( isset($_POST['nombre']) ){
 									<label class="col-lg-6 control-label">Forma de pago:</label>
 									<div class="col-lg-6">
 										<select class="form-control" name="formapago">
-										  <option>Efectivo</option>
-										  <option>Cheque</option>
-										  <option>Transeferencia</option>
+										  <option>Anual</option>
+										  <option>Semestral</option>
+										  <option>Trimestral</option>
+										  <option>Mensual</option>
 										</select>
 									</div>
 								</div>
@@ -191,7 +184,7 @@ if ( isset($_POST['nombre']) ){
 								<div class="col-lg-9"><input type="text" name="asegurado" class="form-control" placeholder=""></div>
 							</div>
 							<div class="form-group" style="">
-								<label class="col-md-3 control-label">Información Adicional</label>
+								<label class="col-md-3 control-label">Descripción</label>
 								<div class="col-md-9"><textarea name="adicional" class="form-control"  style="height:130px;"></textarea></div>
 							</div>
 						</div>

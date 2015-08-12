@@ -1,6 +1,6 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-list"></i> <zPolizas</header>
+	<header class="panel-heading"> <i class="fa fa-file-text-o"></i> Polizas</header>
 	
 	<div class="row wrapper">
 		<div class="col-xs-2 col-sm-2  m-b-xs">
