@@ -1,6 +1,6 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa fa-list"></i> Recibos de poliza </header>
+	<header class="panel-heading"> <i class="fa fa-list-alt"></i> Recibos de poliza </header>
 	
 	<div class="row wrapper">
 		<div class="col-xs-2 col-sm-2  m-b-xs">

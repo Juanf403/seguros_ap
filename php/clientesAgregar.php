@@ -3,7 +3,6 @@
 
 if ( isset($_POST['nombre']) ){
 
-	$num_cliente 	= mysql_real_escape_string($_POST['num_cliente']);
 	$nombre 		= mysql_real_escape_string($_POST['nombre']);
 	$rfc 			= mysql_real_escape_string($_POST['rfc']);
 	$direccion  	= mysql_real_escape_string($_POST['direccion']);
@@ -14,14 +13,15 @@ if ( isset($_POST['nombre']) ){
 	$estado  		= mysql_real_escape_string($_POST['estado']);
 	$telefono  		= mysql_real_escape_string($_POST['telefono']);
 
-	if ( mysql_query("INSERT INTO clientes SET fecha='".date("Y-m-d")."',num_cliente='".$num_cliente."',nombre='".$nombre."',nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."'") ){
+	if ( mysql_query("INSERT INTO clientes SET fecha='".date("Y-m-d")."',nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Cliente agregado correctamente.
 			</div>';
 	} else {
-		$errorMsg = '<div class="alert alert-danger">
-			<i class="fa fa-times"></i> Error, intenta nuevamente.
-		</div>';
+		// $errorMsg = '<div class="alert alert-danger">
+		// 	<i class="fa fa-times"></i> Error, intenta nuevamente.
+		// </div>';
+		$errorMsg = "INSERT INTO clientes SET fecha='".date("Y-m-d")."',nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."'";
 	}
 
 }
@@ -71,7 +71,7 @@ if ( isset($_POST['nombre']) ){
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-2 control-label">Colonia: </label>
-									<div class="col-lg-4"><input type="text" name="contacto" class="form-control" placeholder=""></div>
+									<div class="col-lg-4"><input type="text" name="colonia" class="form-control" placeholder=""></div>
 									<label class="col-lg-2 control-label">CP: </label>
 									<div class="col-lg-4"><input type="text" name="cp" class="form-control" placeholder=""></div>
 								</div>

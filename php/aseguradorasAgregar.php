@@ -3,7 +3,7 @@
 
 if ( isset($_POST['nombre']) ){
 
-	$num_cliente 	= mysql_real_escape_string($_POST['clave']);
+	$clave 	= mysql_real_escape_string($_POST['clave']);
 	$nombre 		= mysql_real_escape_string($_POST['nombre']);
 
 

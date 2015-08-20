@@ -1,9 +1,8 @@
 <?php
-// $id = mysql_real_escape_string($_GET['id']);
+$id = mysql_real_escape_string($_GET['id']);
 
 if ( isset($_POST['nombre']) ){
 
-	$num_cliente 	= mysql_real_escape_string($_POST['num_cliente']);
 	$nombre 		= mysql_real_escape_string($_POST['nombre']);
 	$rfc 			= mysql_real_escape_string($_POST['rfc']);
 	$direccion  	= mysql_real_escape_string($_POST['direccion']);
@@ -15,7 +14,7 @@ if ( isset($_POST['nombre']) ){
 	$telefono  		= mysql_real_escape_string($_POST['telefono']);
 
 
-	if ( mysql_query() ){
+	if ( mysql_query("UPDATE clientes SET nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."' WHERE idclientes='".$id."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Cliente editado correctamente.
 			</div>';
@@ -27,7 +26,7 @@ if ( isset($_POST['nombre']) ){
 
 }
 
-//$data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE id='".$id."' LIMIT 1"));
+$data = mysql_fetch_object(mysql_query("SELECT * FROM clientes WHERE idclientes='".$id."' LIMIT 1"));
 
 ?>
 		<section class="panel panel-default">
@@ -62,7 +61,7 @@ if ( isset($_POST['nombre']) ){
 						<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-2 control-label">Correo</label>
-									<div class="col-lg-10"><input type="text" name="correo" value="<?php echo $data->correo; ?>" class="form-control" placeholder=""></div>
+									<div class="col-lg-10"><input type="text" name="correo" value="<?php echo $data->email; ?>" class="form-control" placeholder=""></div>
 								</div>
 						</div>
 						<div class="col-md-6">
@@ -74,7 +73,7 @@ if ( isset($_POST['nombre']) ){
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="col-lg-2 control-label">Colonia: </label>
-								<div class="col-lg-4"><input type="text" name="contacto" value="<?php echo $data->contacto; ?>" class="form-control" placeholder=""></div>
+								<div class="col-lg-4"><input type="text" name="colonia" value="<?php echo $data->colonia; ?>" class="form-control" placeholder=""></div>
 								<label class="col-lg-2 control-label">CP: </label>
 								<div class="col-lg-4"><input type="text" name="cp" value="<?php echo $data->cp; ?>" class="form-control" placeholder=""></div>
 							</div>

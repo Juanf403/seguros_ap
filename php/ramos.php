@@ -26,28 +26,28 @@
 				</tr>
 			</thead>
 			<tbody>
+<?php
+			if ( isset($_GET['del']) ){
+				$del = mysql_real_escape_string($_GET['del']);
+				mysql_query("DELETE FROM ramos WHERE idramos='".$del."'");
+			}
 
+			$query = mysql_query("SELECT * FROM ramos ORDER BY aseguradora ASC") or die( mysql_error() );
+			while($q = mysql_fetch_object($query)){
+?>
 				<tr>
-					<td>columna 1</td>
-					<td>columna 2 </td>
-					<td>columna 3</td>
-					<td>columna 4 </td>
+					<td><?php echo $q->aseguradora; ?></td>
+					<td><?php echo $q->numramo; ?></td>
+					<td><?php echo $q->descripcion; ?></td>
+					<td><?php echo $q->comision; ?></td>
 					<td>
-						<a href="admin.php?m=ramosEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
-						<a href="admin.php?m=ramos&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=ramosEditar&id=<?php echo $q->idramos; ?>" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=ramos&del=<?php echo $q->idramos; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
-				<tr>
-					<td>columna 1</td>
-					<td>columna 2 </td>
-					<td>columna 3</td>
-					<td>columna 4 </td>
-					<td>
-						<a href="admin.php?m=ramosEditar&id=" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
-						<a href="admin.php?m=ramos&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
-					</td>
-				</tr>
-
+<?php
+			}
+?>
 			</tbody>
 		</table>
 	</div>

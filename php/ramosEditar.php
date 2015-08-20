@@ -1,16 +1,16 @@
 <?php
-//$id = mysql_real_escape_string($_GET['id']);
+$id = mysql_real_escape_string($_GET['id']);
 
-if ( isset($_POST['nombre']) ){
+if ( isset($_POST['aseguradora']) ){
 
-	$num_cliente 	= mysql_real_escape_string($_POST['aseguradora']);
-	$nombre 		= mysql_real_escape_string($_POST['num_ramo']);
-	$rfc 			= mysql_real_escape_string($_POST['comision']);
-	$direccion  	= mysql_real_escape_string($_POST['descripcion']);
-	$correo  		= mysql_real_escape_string($_POST['adicional']);
+	$aseguradora 		= mysql_real_escape_string($_POST['aseguradora']);
+	$numramo 			= mysql_real_escape_string($_POST['numramo']);
+	$comision 			= mysql_real_escape_string($_POST['comision']);
+	$descripcion  		= mysql_real_escape_string($_POST['descripcion']);
+	$adicional  		= mysql_real_escape_string($_POST['adicional']);
 
 
-	if ( mysql_query("UPDATE ramos SET aseguradora='".$aseguradora."',num_ramo='".$num_ramo."',comision='".$comision."',descripcion='".$descripcion."',adicional='".$adicional."'") ){
+	if ( mysql_query("UPDATE ramos SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',numramo='".$numramo."',comision='".$comision."',descripcion='".$descripcion."',adicional='".$adicional."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Ramo editado correctamente.
 			</div>';
@@ -22,7 +22,7 @@ if ( isset($_POST['nombre']) ){
 
 }
 
-//$data = mysql_fetch_object(mysql_query("SELECT * FROM ramos WHERE id='".$id."' LIMIT 1"));
+$data = mysql_fetch_object(mysql_query("SELECT * FROM ramos WHERE idramos='".$id."' LIMIT 1"));
 
 ?>
 		<section class="panel panel-default">
@@ -45,7 +45,7 @@ if ( isset($_POST['nombre']) ){
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="col-lg-2 control-label">No. Ramo</label>
-								<div class="col-lg-4"><input type="text" name="ramo" value="<?php echo $data->ramo; ?>" class="form-control" placeholder=""></div>
+								<div class="col-lg-4"><input type="text" name="numramo" value="<?php echo $data->numramo; ?>" class="form-control" placeholder=""></div>
 								<label class="col-lg-2 control-label">% Comisión</label>
 								<div class="col-lg-4"><input type="text" name="comision" value="<?php echo $data->comision; ?>"  class="form-control" placeholder=""></div>
 							</div>

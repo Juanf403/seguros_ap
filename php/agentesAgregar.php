@@ -1,12 +1,11 @@
 <?php
 #campos: fecha,aseguradora,cedula,nombre,telefono,direccion
 if ( isset($_POST['nombre']) ){
-
-	$num_cliente 	= mysql_real_escape_string($_POST['aseguradora']);
-	$nombre 		= mysql_real_escape_string($_POST['cedula']);
-	$rfc 			= mysql_real_escape_string($_POST['nombre']);
-	$direccion  	= mysql_real_escape_string($_POST['telefono']);
-	$correo  		= mysql_real_escape_string($_POST['direccion']);
+	$aseguradora 		= mysql_real_escape_string($_POST['aseguradora']);
+	$cedula 			= mysql_real_escape_string($_POST['cedula']);
+	$nombre 			= mysql_real_escape_string($_POST['nombre']);
+	$telefono  			= mysql_real_escape_string($_POST['telefono']);
+	$direccion  		= mysql_real_escape_string($_POST['direccion']);
 
 	if ( mysql_query("INSERT INTO agentes SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',cedula='".$cedula."',nombre='".$nombre."',telefono='".$telefono."',direccion='".$direccion."'") ){
 		$errorMsg = '<div class="alert alert-success">
@@ -35,25 +34,25 @@ if ( isset($_POST['nombre']) ){
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Aseguradora </label>
-									<div class="col-lg-8"><input type="text" name="nombre" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="aseguradora" class="form-control" placeholder=""></div>
 								</div>
 							</div>	
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Cedula</label>
-									<div class="col-lg-8"><input type="text" name="rfc" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="cedula" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Nombre</label>
-									<div class="col-lg-8"><input type="text" name="telefono" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="nombre" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 							<div class="col-md-6">
 									<div class="form-group">
 										<label class="col-lg-4 control-label">Tel&eacute;fono</label>
-										<div class="col-lg-8"><input type="text" name="correo" class="form-control" placeholder=""></div>
+										<div class="col-lg-8"><input type="text" name="telefono" class="form-control" placeholder=""></div>
 									</div>
 							</div>
 							<div class="col-md-6">

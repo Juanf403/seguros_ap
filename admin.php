@@ -114,7 +114,7 @@ $errorMsg = "";
 		<header class="bg-black dk header navbar navbar-fixed-top-xs">
 			<div class="navbar-header aside-md">
 				<a class="btn btn-link visible-xs" href="admin.php"> <i class="fa fa-home"></i> </a>
-				<a href="#" class="navbar-brand" data-toggle="fullscreen">Graphix</a>
+				<a href="#" class="navbar-brand" data-toggle="fullscreen">Seguros AP</a>
 				<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a>
 			</div>
 			<ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">

@@ -1,5 +1,7 @@
 <?php
 
+$id = mysql_real_escape_string($_GET['id']);
+
 if ( isset($_POST['nombre']) ){
 
 	$num_cliente 	= mysql_real_escape_string($_POST['aseguradora']);
@@ -8,7 +10,7 @@ if ( isset($_POST['nombre']) ){
 	$direccion  	= mysql_real_escape_string($_POST['telefono']);
 	$correo  		= mysql_real_escape_string($_POST['direccion']);
 
-	if ( mysql_query("INSERT INTO agentes SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',cedula='".$cedula."',nombre='".$nombre."',telefono='".$telefono."',direccion='".$direccion."'") ){
+	if ( mysql_query("UPDATE agentes SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',cedula='".$cedula."',nombre='".$nombre."',telefono='".$telefono."',direccion='".$direccion."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Agrente editado correctamente.
 			</div>';
@@ -19,6 +21,8 @@ if ( isset($_POST['nombre']) ){
 	}
 
 }
+
+$data = mysql_fetch_object(mysql_query("SELECT * FROM agentes WHERE idagentes='".$id."' LIMIT 1"));
 
 ?>
 		<section class="panel panel-default">
@@ -35,31 +39,31 @@ if ( isset($_POST['nombre']) ){
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Aseguradora </label>
-									<div class="col-lg-8"><input type="text" name="nombre" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="aseguradora" value="<?php echo $data->aseguradora; ?>"  class="form-control" placeholder=""></div>
 								</div>
 							</div>	
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Cedula</label>
-									<div class="col-lg-8"><input type="text" name="rfc" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="cedula" value="<?php echo $data->cedula; ?>" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Nombre</label>
-									<div class="col-lg-8"><input type="text" name="telefono" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="nombre" value="<?php echo $data->nombre; ?>" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 							<div class="col-md-6">
 									<div class="form-group">
 										<label class="col-lg-4 control-label">Tel&eacute;fono</label>
-										<div class="col-lg-8"><input type="text" name="correo" class="form-control" placeholder=""></div>
+										<div class="col-lg-8"><input type="text" name="telefono" value="<?php echo $data->telefono; ?>" class="form-control" placeholder=""></div>
 									</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-4 control-label">Direcci&oacute;n</label>
-									<div class="col-lg-8"><input type="text" name="direccion" class="form-control" placeholder=""></div>
+									<div class="col-lg-8"><input type="text" name="direccion" value="<?php echo $data->direccion; ?>" class="form-control" placeholder=""></div>
 								</div>
 							</div>
 					</div>

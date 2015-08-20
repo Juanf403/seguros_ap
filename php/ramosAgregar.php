@@ -1,15 +1,15 @@
 <?php
 #campos: fecha,aseguradora,num_ramo,comision,descripcion,adicional
 
-if ( isset($_POST['nombre']) ){
+if ( isset($_POST['aseguradora']) ){
 
-	$num_cliente 	= mysql_real_escape_string($_POST['aseguradora']);
-	$nombre 		= mysql_real_escape_string($_POST['num_ramo']);
-	$rfc 			= mysql_real_escape_string($_POST['comision']);
-	$direccion  	= mysql_real_escape_string($_POST['descripcion']);
-	$correo  		= mysql_real_escape_string($_POST['adicional']);
+	$aseguradora 	= mysql_real_escape_string($_POST['aseguradora']);
+	$numramo 		= mysql_real_escape_string($_POST['numramo']);
+	$comision 			= mysql_real_escape_string($_POST['comision']);
+	$descripcion  	= mysql_real_escape_string($_POST['descripcion']);
+	$adicional  		= mysql_real_escape_string($_POST['adicional']);
 
-	if ( mysql_query("INSERT INTO ramos SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',num_ramo='".$num_ramo."',comision='".$comision."',rfc='".$rfc."',descripcion='".$descripcion."',adicional='".$adicional."'") ){
+	if ( mysql_query("INSERT INTO ramos SET fecha='".date("Y-m-d")."',aseguradora='".$aseguradora."',numramo='".$numramo."',comision='".$comision."',descripcion='".$descripcion."',adicional='".$adicional."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Ramo agregado correctamente.
 			</div>';
@@ -42,7 +42,7 @@ if ( isset($_POST['nombre']) ){
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="col-lg-2 control-label">No. Ramo</label>
-								<div class="col-lg-4"><input type="text" name="ramo" class="form-control" placeholder=""></div>
+								<div class="col-lg-4"><input type="text" name="numramo" class="form-control" placeholder=""></div>
 								<label class="col-lg-2 control-label">% Comisión</label>
 								<div class="col-lg-4"><input type="text" name="comision" class="form-control" placeholder=""></div>
 							</div>

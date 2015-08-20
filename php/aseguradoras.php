@@ -24,22 +24,25 @@
 				</tr>
 			</thead>
 			<tbody>
+<?php
+			if ( isset($_GET['del']) ){
+				$del = mysql_real_escape_string($_GET['del']);
+				mysql_query("DELETE FROM aseguradoras WHERE idaseguradoras='".$del."'");
+			}
 
+			$query = mysql_query("SELECT * FROM aseguradoras ORDER BY nombre ASC") or die( mysql_error() );
+			while($q = mysql_fetch_object($query)){
+?>
 				<tr>
-					<td>columna 1</td>
-					<td>columna 2 </td>
+					<td><?php echo $q->clave; ?></td>
+					<td><?php echo $q->nombre; ?></td>
 					<td>
-						<a href="admin.php?m=aseguradoras&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=aseguradoras&del=<?php echo $q->idaseguradoras; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
-				<tr>
-					<td>columna 1</td>
-					<td>columna 2 </td>
-					<td>
-						<a href="admin.php?m=aseguradoras&del=" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
-					</td>
-				</tr>
-
+<?php
+			}
+?>
 			</tbody>
 		</table>
 	</div>
