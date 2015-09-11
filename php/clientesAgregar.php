@@ -18,10 +18,9 @@ if ( isset($_POST['nombre']) ){
 				<i class="fa fa-check"></i> Cliente agregado correctamente.
 			</div>';
 	} else {
-		// $errorMsg = '<div class="alert alert-danger">
-		// 	<i class="fa fa-times"></i> Error, intenta nuevamente.
-		// </div>';
-		$errorMsg = "INSERT INTO clientes SET fecha='".date("Y-m-d")."',nombre='".$nombre."',rfc='".$rfc."',direccion='".$direccion."',email='".$correo."',colonia='".$colonia."',cp='".$cp."',ciudad='".$ciudad."',estado='".$estado."',telefono='".$telefono."'";
+		 $errorMsg = '<div class="alert alert-danger">
+		 	<i class="fa fa-times"></i> Error, intenta nuevamente.
+		 </div>';
 	}
 
 }
